@@ -21,7 +21,7 @@
     grid-template-rows: auto minmax(100dvh, 100%) auto;
 }
 /* text-align center */
-:is( footer p ){
+:is(h2, footer p ){
     text-align: center;
     font-family: "Playfair Display", sans-serif;
     color: #888870;
@@ -64,5 +64,21 @@ background-image: url("https://nusaibah01.github.io/all-images/images/download (
     button:hover{
 color: rosybrown;
     }
+}
+/* About  */
+#aim{
+    font-weight: bold;
+    text-align: center;
+}
+p{
+    font-family: "Lato", sans-serif;
+    color: tan;
+}
+.row{
+    text-align: center;
+}
+#suggest{
+    border-radius: 5px;
+    
 }
 
