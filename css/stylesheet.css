@@ -5,3 +5,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+ /* Navabar */
+.navbar{
+    background-color: #712E1E;
+    & img[alt='logo'] {
+        width: 5rem;
+    }
+    :is(.nav-link, a) {
+        color: #FFD5AF;
+        font-family: "Playfair Display", sans-serif;
+    }
+}
