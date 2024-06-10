@@ -34,3 +34,35 @@ footer{
     padding: 20px 0;
     
 }
+/* Landing Page */
+.hero-image{
+width: 50%; 
+height: 50%;
+background-image: url("https://nusaibah01.github.io/all-images/images/download (2).jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+}
+.header{
+    text-align: center;
+    font-family:"Playfair Display", sans-serif;
+    color: brown;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+}
+.landing-page{
+    button{
+        border-radius: 5px;
+        border-color: #712E1E;
+        background-color: #712E1E;
+    
+    }
+    button:hover{
+color: rosybrown;
+    }
+}
+
