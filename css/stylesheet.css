@@ -10,9 +10,27 @@
     background-color: #712E1E;
     & img[alt='logo'] {
         width: 5rem;
+        border-radius: 5px;
     }
     :is(.nav-link, a) {
         color: #FFD5AF;
         font-family: "Playfair Display", sans-serif;
     }
+} 
+:is(body) {
+    grid-template-rows: auto minmax(100dvh, 100%) auto;
+}
+/* text-align center */
+:is( footer p ){
+    text-align: center;
+    font-family: "Playfair Display", sans-serif;
+    color: #888870;
+
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #712E1E;
+    padding: 20px 0;
+    
 }
