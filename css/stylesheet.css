@@ -82,3 +82,27 @@ p{
     
 }
 
+/* All Images */
+img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    
+}
+:is(h2, footer p) {
+    text-align: center;
+}
+.card {
+    width: 18rem;
+
+    & img {
+        object-fit: contain;
+        padding-block: .2rem;
+    }
+
+    & .card-body {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 4;
+    }
+}
