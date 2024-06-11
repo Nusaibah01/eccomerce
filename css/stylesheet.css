@@ -13,7 +13,7 @@
         border-radius: 5px;
     }
     :is(.nav-link, a) {
-        color: #FFD5AF;
+        color: tan;
         font-family: "Playfair Display", sans-serif;
     }
 } 
@@ -30,7 +30,7 @@
 footer{
     position: absolute;
     bottom: 0;
-    background-color: #712E1E;
+    background-color: #1D3124;
     padding: 20px 0;
     
 }
