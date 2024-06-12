@@ -43,7 +43,7 @@
               </li>
              
               <li class="nav-item">
-                <a class="nav-link " href="../html/checkout.html">Checkout</a>
+                <a class="nav-link " href="../html/checkout.html">Checkout <span class="badge rounded-pill  bg-success" counter></span></a>
               </li>
              
               <li class="nav-item">
@@ -58,9 +58,51 @@
         </div>
       </nav>
     <!-- Main -->
-     <main>
-      
+     <main >
+      <div class="container-fluid" checkout>
+        <h1>Checkout</h1>
+        <table>
+          
+				<tr>
+			<th>Book Title</th>
+			<th>Genre</th>	
+			<th>Quantity</th>	
+			<th>Price</th>	
+			<th>Total Amount</th>
+				
+			</tr>
+			<tr>
+			<td><div class="container" title>
+
+      </div></td>
+			<td>
+				<div class="container" genre>
+
+        </div>
+			</td>
+			<td><input type="number" min="1"></td>
+			<td>Price</td>
+      <td><input type="number"></td>
+			<td id="amountTotal"></td>
+			
+			</tr>
+			<tr>
+				<td></td>
+			
+				
+				 
+			</tr>
+			<tr>
+			<td colspan="4">Total Amount Due</td>
+			<!-- <td><button type="button" onclick="calculateTotal()" >Total Price</button></td> -->
+			<td id="totalPrice"></td>
+			</tr>
+			
+        </table>
+      </div>
+      </div>
      </main>
+
       <footer class="container-fluid">
         <div class="row">
         <p class="lead">Eunioa &copy;<span currentYear></span></p>

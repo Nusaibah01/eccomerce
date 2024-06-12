@@ -18,6 +18,7 @@
     }
 } 
 :is(body) {
+    display: grid;
     grid-template-rows: auto minmax(100dvh, 100%) auto;
 }
 /* text-align center */
@@ -38,12 +39,13 @@ footer{
 .hero-image{
 width: 50%; 
 height: 50%;
-background-image: url("https://nusaibah01.github.io/all-images/images/download (2).jpg");
+background-image: url("../background-images/StockCake-Open\ Book\ Illustration_1718182703.jpg");
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
  position: relative;
 }
+
 .header{
     text-align: center;
     font-family:"Playfair Display", sans-serif;
@@ -52,8 +54,69 @@ background-image: url("https://nusaibah01.github.io/all-images/images/download (
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-
+ p{
+font-weight: bold;
 }
+}
+/* Welcome Animation */
+/* .welcome{
+        font-size: 3rem;
+        font-weight: bold;
+        animation: bounce 1s ease-in-out;
+      }
+      
+      @keyframes bounce {
+        0% {
+          transform: translateY(-80px);
+          animation-timing-function: ease-in;
+        }
+        40% {
+          transform: translateY(0);
+          animation-timing-function: ease-out;
+        }
+        60% {
+          transform: translateY(-40px);
+          animation-timing-function: ease-in;
+        }
+        80% {
+          transform: translateY(0);
+          animation-timing-function: ease-out;
+        }
+        100% {
+          transform: translateY(-10px);
+          animation-timing-function: ease-in;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .welcome-text {
+          font-size: 2rem;
+        }
+      
+        @keyframes bounce {
+          0% {
+            transform: translateY(-50px);
+            animation-timing-function: ease-in;
+          }
+          40% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+          }
+          60% {
+            transform: translateY(-30px);
+            animation-timing-function: ease-in;
+          }
+          80% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+          }
+          100% {
+            transform: translateY(-5px);
+            animation-timing-function: ease-in;
+          }
+        }
+      }
+     */
 .landing-page{
     button{
         border-radius: 5px;
@@ -82,3 +145,112 @@ p{
     
 }
 
+/* All Images */
+img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    
+}
+:is(h2, footer p) {
+    text-align: center;
+}
+.card {
+    width: 18rem;
+
+    & img {
+        object-fit: contain;
+        padding-block: .2rem;
+    }
+
+    & .card-body {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 4;
+    }
+}
+/* Spinner */
+
+.lds-circle,
+.lds-circle div {
+  box-sizing: border-box;
+}
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+}
+.lds-circle > div {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes lds-circle {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+/* Chcekout  */
+
+/* Table */
+.table-responsive {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .total-amount {
+    font-weight: bold;
+  }
+  
+  .quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-qty {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  
+  @media (max-width: 767px) {
+    /* Responsive table styles */
+  }
+.bookTitle{
+    font-family:"Playfair Display", sans-serif;
+}
