@@ -11,8 +11,7 @@ let products = JSON.parse(
 let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
     ? JSON.parse(localStorage.getItem('checkout'))
     : []
-// Current year
-document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
+
 
 function displayProducts(args) {
     container.innerHTML = ""
@@ -50,7 +49,7 @@ searchProduct.addEventListener('keyup', () => {
         }
         let filteredProduct = products.filter(product => product.bookTitle.toLowerCase().includes(searchProduct.value))
         displayProducts(filteredProduct)
-        if (!filteredProduct.length) throw new Error(`${searchProduct.value} product was not found`)
+        if (!filteredProduct.length) throw new Error(`${searchProduct.value} title not found`)
     } catch (e) {
         container.textContent = e.message || 'Please try again later'
     }

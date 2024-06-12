@@ -13,7 +13,7 @@
         border-radius: 5px;
     }
     :is(.nav-link, a) {
-        color: tan;
+        color: #d2b48c;
         font-family: "Playfair Display", sans-serif;
     }
 } 
@@ -49,7 +49,7 @@ background-image: url("../background-images/StockCake-Open\ Book\ Illustration_1
 .header{
     text-align: center;
     font-family:"Playfair Display", sans-serif;
-    color: brown;
+    color: #a52a2a;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -206,6 +206,10 @@ img {
 /* Chcekout  */
 
 /* Table */
+#c{
+  text-align: center;
+  font-family: "Playfair Display", sans-serif;
+}
 .table-responsive {
     overflow-x: auto;
   }
@@ -216,6 +220,7 @@ img {
   }
   
   th, td {
+    font-family: "Playfair Display", sans-serif;
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -251,6 +256,34 @@ img {
   @media (max-width: 767px) {
     /* Responsive table styles */
   }
-.bookTitle{
+  p{
+    text-align: center;
+  }
+h3{
+    text-align: center;
     font-family:"Playfair Display", sans-serif;
 }
+form{
+    text-align: center;
+}
+  .text area{
+height: 150px;
+}
+.btn {
+    display: inline-block;
+    background-color: sienna;
+    color: #fff;
+    font-family:"Playfair Display", sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: black;
+  }
+  a:link{
+    color: #712E1E;
+  }
