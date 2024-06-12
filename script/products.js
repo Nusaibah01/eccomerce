@@ -7,7 +7,7 @@ let sortingByAmount = document.querySelector('[sort]')
 let products = JSON.parse(
     localStorage.getItem('products')
 )
-// items/products 
+// Checkout Books
 let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
     ? JSON.parse(localStorage.getItem('checkout'))
     : []
@@ -19,7 +19,8 @@ function displayProducts(args) {
     try {
         args.forEach(product => {
             container.innerHTML += `
-                <div class="card">
+            <div class="row">
+            <div class="card">
                     <img src="${product.img_url}" class="card-img-top" alt="${product.bookTitle}" loading='lazy'>
                     <div class="card-body">
                         <h5 class="card-title">${product.bookTitle}</h5>

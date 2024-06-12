@@ -18,6 +18,7 @@
     }
 } 
 :is(body) {
+    display: grid;
     grid-template-rows: auto minmax(100dvh, 100%) auto;
 }
 /* text-align center */
@@ -53,7 +54,9 @@ background-image: url("../background-images/StockCake-Open\ Book\ Illustration_1
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
-
+ p{
+font-weight: bold;
+}
 }
 /* Welcome Animation */
 /* .welcome{
@@ -248,3 +251,6 @@ img {
   @media (max-width: 767px) {
     /* Responsive table styles */
   }
+.bookTitle{
+    font-family:"Playfair Display", sans-serif;
+}

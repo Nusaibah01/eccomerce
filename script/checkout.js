@@ -1,69 +1,12 @@
-//  Checkout table 
-let bookTitle = 
-
-function updateQuantity(button, direction) {
-    const quantityInput = button.closest('.quantity-control').querySelector('.quantity');
-    let quantity = parseInt(quantityInput.value);
-    quantity += direction;
-    if (quantity < 1) {
-      quantity = 1;
-    }
-    quantityInput.value = quantity;
-    calculateTotal();
-  }
-  
-  function calculateTotal() {
-    let totalAmount = 0;
-    const quantities = document.querySelectorAll('.quantity');
-    const productTotals = document.querySelectorAll('.product-total');
-  
-    quantities.forEach((quantity, index) => {
-      const price = parseFloat(productTotals[index].textContent.replace('R', ''));
-      const qty = parseInt(quantity.value);
-      const total = price * qty;
-      productTotals[index].textContent = `R${total.toFixed(2)}`;
-      totalAmount += total;
-    });
-  
-    const totalAmountElement = document.querySelector('.total-amount');
-    totalAmountElement.textContent = `R${totalAmount.toFixed(2)}`;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//  Checkout table
+// Calculate Total 
+function calculateTotal(){
+    let total = 0;
+    products.forEach(product => {
+        total += product.price
+})
+document.querySelector('[total]')
+}return total.toFixed(2)
 
 
 // let container = document.querySelector('[checkout]')
@@ -103,28 +46,28 @@ function updateQuantity(button, direction) {
 
 
 
-<div class="container-fluid">
- <caption>Cart</caption>
-<table>
+// <div class="container-fluid">
+//  <caption>Cart</caption>
+// <table>
 
- <tr>
-   <thead>
-   <th>Book Title</th>
-   <th>Genre</th>
-   <th>Quantity</th>
-   <th>Price</th>
-   <th>Total</th>
- </thead>
-</tr>
-<tbody>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tbody>
-</table>
-</div>
+//  <tr>
+//    <thead>
+//    <th>Book Title</th>
+//    <th>Genre</th>
+//    <th>Quantity</th>
+//    <th>Price</th>
+//    <th>Total</th>
+//  </thead>
+// </tr>
+// <tbody>
+// <td></td>
+// <td></td>
+// <td></td>
+// <td></td>
+// <td></td>
+// </tbody>
+// </table>
+// </div>
 
 
 
