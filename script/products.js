@@ -40,7 +40,8 @@ function displayProducts(args) {
 }
 displayProducts(products)
 
-// keyup
+
+// Search For Books
 searchProduct.addEventListener('keyup', () => {
     try {
         if (searchProduct.value.length < 1) {
