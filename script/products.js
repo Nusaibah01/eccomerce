@@ -1,5 +1,5 @@
 // Display the current year
-document.querySelector('[currentYear]').textContent =new Date().getUTCFullYear()
+document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
 
 let container = document.querySelector('[ourBooks]')
 let searchProduct = document.querySelector('[findBook]')
@@ -8,19 +8,16 @@ let products = JSON.parse(
     localStorage.getItem('products')
 )
 // Checkout Books
-let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
-    ? JSON.parse(localStorage.getItem('checkout'))
-    : []
+let checkoutItems = JSON.parse(localStorage.getItem('checkout')) ?
+    JSON.parse(localStorage.getItem('checkout')) :
+    []
 // Display Products
 function displayProducts(args) {
     container.innerHTML = ""
     try {
         args.forEach(product => {
             container.innerHTML += `
-            <div class="container-fluid" id="p">
-            
-            
-            <div class="card"  style="width: 18rem;">
+            <div class="card" ">
                     <img src="${product.img_url}" class="card-img-top" alt="${product.bookTitle}" loading='lazy'>
                     <div class="card-body">
                         <h5 class="card-title">${product.bookTitle}</h5>
@@ -32,7 +29,7 @@ function displayProducts(args) {
                         <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to Cart</button>
                     </div>
                 </div>
-            </div>
+                
                 `
         })
 
@@ -159,7 +156,7 @@ window.onload = () => {
 //   </div>
 // </div>`
 // })
-    
+
 // }
 // catch (e){
 // container.textContent = "Please try again later"

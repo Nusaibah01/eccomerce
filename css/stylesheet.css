@@ -157,7 +157,7 @@ img {
 }
 #p{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
 }
 .card {
     width: 18rem;
@@ -295,7 +295,7 @@ height: 150px;
 
   /* Contact Page */
   #contactUs{
-    background-color: saddlebrown;
+    background-color: ;
     h1{
       color: black;
       font-family: "Playfair Display", sans-serif;
@@ -306,7 +306,7 @@ height: 150px;
   
     }
   }
-  
+/*   
   .i{
     background-color: tan;
     width: 70%; 
@@ -353,5 +353,5 @@ height: 150px;
   #b:hover{
   opacity: 80%;
   cursor: pointer;
-  }
+  } */
   
