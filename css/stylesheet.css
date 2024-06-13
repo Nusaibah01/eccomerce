@@ -13,7 +13,7 @@
         border-radius: 5px;
     }
     :is(.nav-link, a) {
-        color: tan;
+        color: #d2b48c;
         font-family: "Playfair Display", sans-serif;
     }
 } 
@@ -49,7 +49,7 @@ background-image: url("../background-images/StockCake-Open\ Book\ Illustration_1
 .header{
     text-align: center;
     font-family:"Playfair Display", sans-serif;
-    color: brown;
+    color: #a52a2a;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,7 +59,7 @@ font-weight: bold;
 }
 }
 /* Welcome Animation */
-/* .welcome{
+.welcome{
         font-size: 3rem;
         font-weight: bold;
         animation: bounce 1s ease-in-out;
@@ -134,7 +134,7 @@ color: rosybrown;
     text-align: center;
 }
 p{
-    font-family: "Lato", sans-serif;
+    font-family: "Yusei Magic" , "Lato", sans-serif;
     color: tan;
 }
 .row{
@@ -155,8 +155,13 @@ img {
 :is(h2, footer p) {
     text-align: center;
 }
+#p{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .card {
     width: 18rem;
+   
 
     & img {
         object-fit: contain;
@@ -206,6 +211,10 @@ img {
 /* Chcekout  */
 
 /* Table */
+#c{
+  text-align: center;
+  font-family: "Playfair Display", sans-serif;
+}
 .table-responsive {
     overflow-x: auto;
   }
@@ -216,6 +225,7 @@ img {
   }
   
   th, td {
+    font-family: "Playfair Display", sans-serif;
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -251,6 +261,97 @@ img {
   @media (max-width: 767px) {
     /* Responsive table styles */
   }
-.bookTitle{
+  p{
+    text-align: center;
+  }
+h3{
+    text-align: center;
     font-family:"Playfair Display", sans-serif;
 }
+form{
+    text-align: center;
+}
+  .text area{
+height: 150px;
+}
+.btn {
+    display: inline-block;
+    background-color: sienna;
+    color: #fff;
+    font-family:"Playfair Display", sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: black;
+  }
+  a:link{
+    color: #712E1E;
+  }
+
+  /* Contact Page */
+  #contactUs{
+    background-color: saddlebrown;
+    h1{
+      color: black;
+      font-family: "Playfair Display", sans-serif;
+      text-align: center;
+      padding-top: 10px;
+      font-size: 60px;
+     
+  
+    }
+  }
+  
+  .i{
+    background-color: tan;
+    width: 70%; 
+    margin-left: 12%;
+    font-size: 20px;
+    padding:  16px 16px;
+    border-radius: 10px;
+    border-color: brown;
+    margin-bottom: 20px;
+  }
+  #i:focus-within{
+    outline: none;
+    border-color: #1D3124;
+    border-width: 3px;
+  
+  }
+  textarea{
+    background-color: tan;
+    width: 70%;
+    margin-left: 12%;
+    font-size: 20px;
+    padding: 16px 16px;
+    border-radius: 10px ;
+    margin-bottom: 25px;
+  }
+  textarea:focus-within{
+    outline: none;
+    border-color: #1D3124;
+    border-width: 3px;
+    
+  }
+  #b{
+    background-color: tan;
+    border-radius: 20px;
+    border-color: black;
+    font-size: 22px;
+    padding: 10px 18px;
+    text-align: center;
+    margin: auto ;
+    display: flex;
+  
+    
+  }
+  #b:hover{
+  opacity: 80%;
+  cursor: pointer;
+  }
+  
