@@ -59,36 +59,32 @@
       </nav>
     <!-- Main -->
      <main >
-      <div class="container-fluid" checkout id="con">
-        <h1 id="c">Checkout</h1>
-        <table>
-  <tr>
-    <th>Book Title</th>
-    <th>Genre</th>
-    <th>Quantity</th>
-    <th>Price</th>
-    <th>Total Amount</th>
-  </tr>
-  <tr>
-    <td><div class="container" title></div></td>
-    <td><div class="container" genre></div></td>
-    <td><input type="number" min="1"></td>
-    <td></td>
-    <td><div class="container" totalAmount></div></td>
-    <td id="amountTotal"></td>
-  </tr>
-  <tr>
-    <td colspan="4">Total Amount Due</td>
-    <td id="totalPrice"></td>
-  </tr>
-</table>
+      <div class="container-fluid" table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Product Image</th>
+              <th>Book Title</th>
+              <th>Genre</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              
+            </tr>
+          </thead>
+          <tbody data-container>
+          
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">
+           Total Amount Due
+              </td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
-      <div id="cart-display">
         
-      </div>
-      <div class="container" userMessage>
-        
-      </div>
+      
      </main>
 
       <footer class="container-fluid">

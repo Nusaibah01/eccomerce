@@ -95,11 +95,11 @@ JSON.stringify(
 )
 
 function displayProducts() {
-    const productTable = document.getElementById('productTable');
+    const productTable = document.getElementById('productTable')
     productTable.innerHTML = '';
   
     products.forEach(product => {
-      const row = document.createElement('tr');
+      const row = document.createElement('tr')
       row.innerHTML = `
         <td><img src="${product.image_url}" alt="${product.bookTitle}" class="img-fluid" style="max-width: 100px;"></td>
         <td>${product.bookTitle}</td>
@@ -109,42 +109,42 @@ function displayProducts() {
           <button class="btn btn-primary btn-sm me-2" onclick="editProduct('${product.bookTitle}')">Edit</button>
           <button class="btn btn-danger btn-sm" onclick="deleteProduct('${product.bookTitle}')">Delete</button>
         </td>
-      `;
-      productTable.appendChild(row);
-    });
+      `
+      productTable.appendChild(row)
+    })
   }
   
   function addProduct() {
-    const name = document.getElementById('product').value;
-    const image = document.getElementById('productImage').value;
-    const category = document.getElementById('productCategory').value;
-    const price = parseFloat(document.getElementById('productPrice').value);
+    const name = document.getElementById('product').value
+    const image = document.getElementById('productImage').value
+    const category = document.getElementById('productCategory').value
+    const price = parseFloat(document.getElementById('productPrice').value)
   
-    products.push({ name, image, category, price });
-    displayProducts();
+    products.push({ name, image, category, price })
+    displayProducts()
   
     // Clear the form and close the modal
-    document.getElementById('addProductForm').reset();
-    const addProductModal = document.getElementById('addProductModal');
-    const modal = bootstrap.Modal.getInstance(addProductModal);
-    modal.hide();
+    document.getElementById('addProductForm').reset()
+    const addProductModal = document.getElementById('addProductModal')
+    const modal = bootstrap.Modal.getInstance(addProductModal)
+    modal.hide()
   }
   
   function sortProducts(sortBy) {
     products.sort((a, b) => {
-      if (a[sortBy] < b[sortBy]) return -1;
-      if (a[sortBy] > b[sortBy]) return 1;
-      return 0;
+      if (a[sortBy] < b[sortBy]) return -1
+      if (a[sortBy] > b[sortBy]) return 1
+      return 0
     });
     displayProducts();
   }
   
   function editProduct(name) {
-    // Implement edit functionality
+
   }
   
   function deleteProduct(name) {
-    // Implement delete functionality
+    
   }
   
   displayProducts();
