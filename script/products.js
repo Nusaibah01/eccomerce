@@ -29,7 +29,7 @@ function displayProducts(args) {
                             <span class="shadow text-success fw-bold">Amount</span>
                             R${product.price}
                         </p>
-                        <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'><i class="bi bi-cart4"></button>
+                        <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'>Add to Cart</button>
                     </div>
                 </div>
             </div>

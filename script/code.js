@@ -1,3 +1,5 @@
+// Display the current year
+document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
 // Products
 let products = JSON.parse(localStorage.getItem('products')) ? JSON.parse
 (localStorage.getItem('products')) : localStorage.setItem(
@@ -64,7 +66,7 @@ JSON.stringify(
     id: 8,
     bookTitle:"The Metamorphosis",
     genre: "Absurdist Fiction",
-    descriptiion:"Gregor Samsa, a traveling salesman, wakes up in his bed to find himself transformed into a large insect.",
+    description:"Gregor Samsa, a traveling salesman, wakes up in his bed to find himself transformed into a large insect.",
     price: 145.00,
     img_url: "https://nusaibah01.github.io/all-images/images/The Metamorphosis.jpg"
 },
@@ -80,7 +82,7 @@ JSON.stringify(
     id: 10,
     bookTitle:"The Book Thief",
     genre: "Historical Fiction",
-    descriptiion:"The Book Thief is a story narrated by a compassionate Death who tells us about Liesel, a girl growing up in Germany during World War II.",
+    description:"The Book Thief is a story narrated by a compassionate Death who tells us about Liesel, a girl growing up in Germany during World War II.",
     price: 500.00,
     img_url: "https://nusaibah01.github.io/all-images/images/The book thief.jpg"
 },
@@ -112,6 +114,3 @@ JSON.stringify(
 
 
 
-
-// Display the current year
-document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
