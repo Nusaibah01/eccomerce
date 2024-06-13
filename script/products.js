@@ -11,15 +11,16 @@ let products = JSON.parse(
 let checkoutItems = JSON.parse(localStorage.getItem('checkout'))
     ? JSON.parse(localStorage.getItem('checkout'))
     : []
-
-
+// Display Products
 function displayProducts(args) {
     container.innerHTML = ""
     try {
         args.forEach(product => {
             container.innerHTML += `
-            <div class="row">
-            <div class="card">
+            <div class="container-fluid" id="p">
+            
+            
+            <div class="card"  style="width: 18rem;">
                     <img src="${product.img_url}" class="card-img-top" alt="${product.bookTitle}" loading='lazy'>
                     <div class="card-body">
                         <h5 class="card-title">${product.bookTitle}</h5>
@@ -31,14 +32,18 @@ function displayProducts(args) {
                         <button type='button' class="btn btn-success" onclick='addToCart(${JSON.stringify(product)})'><i class="bi bi-cart4"></button>
                     </div>
                 </div>
-            `
+            </div>
+                `
         })
 
     } catch (e) {
-        container.textContent = "Please try again later"
+        container.innerHTML `
+        `
     }
 }
 displayProducts(products)
+
+
 
 
 // Search For Books
