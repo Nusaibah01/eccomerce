@@ -57,18 +57,18 @@ function displayCartItems() {
 
   let totalAmount = 0;
 
-  cartItems.forEach((item, index) => {
+  cartItems.forEach((product, index) => {
     let row = document.createElement('tr');
     row.innerHTML = `
-      <td>${item.name}</td>
-      <td>${item.category}</td>
-      <td>${item.quantity}</td>
-      <td>R${item.price.toFixed(2)}</td>
-      <td>R${(item.price * item.quantity).toFixed(2)}</td>
+      <td>${product.bookTitle}</td>
+      <td>${product.genre}</td>
+      <td>${product.quantity}</td>
+      <td>R${product.price.toFixed(2)}</td>
+      <td>R${(product.price * product.quantity).toFixed(2)}</td>
     `;
     cartItemsContainer.appendChild(row);
 
-    totalAmount += item.price * item.quantity;
+    totalAmount += product.price * product.quantity;
   });
 
   document.getElementById('total-amount').textContent = `R${totalAmount.toFixed(2)}`;
