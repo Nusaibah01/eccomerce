@@ -1,24 +1,17 @@
 //  Display the current year
 document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
 
+// Checkout-Products (Books) 
+let checkoutItems = JSON.parse(localStorage.getItem('checkout')) ?
+    JSON.parse(localStorage.getItem('checkout')) :
+    []
 
-// Add to Cart
+// Retrieve cart items from localStorage
+let cartItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
 
-function addToCart(product) {
-    try {
-        checkoutItems.push(product)
-        localStorage.setItem('checkout', JSON.stringify(checkoutItems))
-        document.querySelector('[counter]').textContent = checkoutItems.length || 0
-    } catch (e) {
-        alert("Unable to add to cart")
-    }
-}
-window.onload = () => {
-    document.querySelector('[counter]').textContent = checkoutItems.length || 0
-}
-
-
+// Checkout Table
 function checkoutTable(){
+
     let container = document.querySelector('[data-container]')
     checkoutItems.forEach(product => {
         container.innerHTML += `
@@ -31,60 +24,62 @@ function checkoutTable(){
         <td id="amount">R ${product.price}</td>
         </tr>
         `
+
+        
     })
-} catch(e) {
-
+  }
+       
+window.onload = () => {
+  document.querySelector('[counter]').textContent = checkoutItems.length || 0
 }
-
-
-// import { products} from './code.js';
-// function calculateTotal(){
-//     const product = products.find(b => b.name === bookTitle)
-//     let productQuanity = document.querySelector(']')
-//     const totalCost = product.price * product.
-
-// }
-
-// 
-
-// Retrieve cart items from localStorage
-let cartItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
 
 // Display the cart items in the table
 function displayCartItems() {
-  let cartItemsContainer = document.getElementById('cart-items');
-  cartItemsContainer.innerHTML = '';
+  let container = document.querySelector('[data-container]')
+  container.innerHTML = ''
 
-  let totalAmount = 0;
+  let totalAmount = 0
 
-  cartItems.forEach((product, index) => {
-    let row = document.createElement('tr');
-    row.innerHTML = `
+  checkoutItems.forEach((product) => {
+
+    container.innerHTML += `
+    <tr>
       <td>${product.bookTitle}</td>
       <td>${product.genre}</td>
-      <td>${product.quantity}</td>
+      <td><input type="number" class="itemQuantity" min="1"></td>
       <td>R${product.price.toFixed(2)}</td>
       <td>R${(product.price * product.quantity).toFixed(2)}</td>
-    `;
-    cartItemsContainer.appendChild(row);
+      </tr>
+    `
 
     totalAmount += product.price * product.quantity;
-  });
+  
+  })
 
-  document.getElementById('total-amount').textContent = `R${totalAmount.toFixed(2)}`;
+  document.getElementById('total-amount').textContent = `R${totalAmount.toFixed(2)}`
 }
+displayCartItems()
 
+let quantityInputs = document.querySelectorAll('.itemQuantity');
+quantityInputs.forEach(input => {
+  
+})
 // Clear the cart
 function clearCart() {
+  // Clear the cart items array
   cartItems = [];
-  localStorage.removeItem('cartItems');
+
+  // Remove cart items from localStorage
+  localStorage.removeItem('checkoutItems');
+
+  // Update the displayed cart items
   displayCartItems();
 }
 
 // Show a thank you alert
-function showThankYouAlert() {
-  alert('Thank you for your purchase! (≧∇≦)ﾉ');
+function thankYouAlert() {
+  alert('Thank you for your purchase! (≧∇≦)ﾉ')
 }
 
 // Display the cart items on page load
-displayCartItems();
+displayCartItems()

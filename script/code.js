@@ -12,7 +12,8 @@ JSON.stringify(
     genre: "Historical",
     description: "Jane Eyre: Deluxe Hardbound Edition by Charlotte Bront:Follows the story of Jane, a seemingly plain and simple girl as she battles through life's struggles.",
     price: 439.00 ,
-    img_url: "https://nusaibah01.github.io/all-images/images/Jane.jpg"
+    img_url: "https://nusaibah01.github.io/all-images/images/Jane.jpg",
+    quantity: "document.getElementById('itemQuantity')"
 },
 {
     id: 2,
@@ -58,9 +59,9 @@ JSON.stringify(
     id: 7,
     bookTitle:"A tempest of Tea(Blood and Tea, #1)",
     genre: "Fantasy",
-    description: "On the streets of White Roaring, Arthie Casimir is a criminal mastermind and collector of secrets. Her prestigious tearoom transforms into an illegal bloodhouse by dark, catering to the vampires feared by society. But when her establishment is threatened, Arthie is forced to strike an unlikely deal with an alluring adversary to save it—and she can’t do the job alone.",
+    description: "Her prestigious tearoom transforms into an illegal bloodhouse by dark, catering to the vampires feared by society. But when her establishment is threatened, Arthie is forced to strike an unlikely deal with an alluring adversary to save it—and she can't do the job alone.",
     price: 286.00,
-    img_url: "https://nusaibah01.github.io/all-images/images/A Tempest of Tea (Blood and Tea, #1) .jpg"
+    img_url: "https://nusaibah01.github.io/all-images/images/ATempestofTeaBloodandTea1.jpg"
 },
 {
     id: 8,
@@ -68,7 +69,7 @@ JSON.stringify(
     genre: "Absurdist Fiction",
     description:"Gregor Samsa, a traveling salesman, wakes up in his bed to find himself transformed into a large insect.",
     price: 145.00,
-    img_url: "https://nusaibah01.github.io/all-images/images/The Metamorphosis.jpg"
+    img_url: "https://nusaibah01.github.io/all-images/images/TheMetamorphosis.jpg"
 },
 {
     id: 9,
@@ -76,7 +77,7 @@ JSON.stringify(
     genre: "Psychological Fiction",
     description:"The fantasy novel revolves around a teenage Indian boy, Pi, who becomes lost at sea after a shipwreck. Pi finds himself struggling for survival against the torrential ocean with his only companion, a Bengal tiger.",
     price: 165.00,
-    img_url: "https://nusaibah01.github.io/all-images/images/Life Of Pi.jpg"
+    img_url: "https://nusaibah01.github.io/all-images/images/LifeOfPi.jpg"
 },
 {
     id: 10,
@@ -84,7 +85,7 @@ JSON.stringify(
     genre: "Historical Fiction",
     description:"The Book Thief is a story narrated by a compassionate Death who tells us about Liesel, a girl growing up in Germany during World War II.",
     price: 500.00,
-    img_url: "https://nusaibah01.github.io/all-images/images/The book thief.jpg"
+    img_url: "https://nusaibah01.github.io/all-images/images/Thebookthief.jpg"
 },
 
 

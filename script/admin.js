@@ -61,7 +61,7 @@ JSON.stringify(
     genre: "Fantasy",
     description: "On the streets of White Roaring, Arthie Casimir is a criminal mastermind and collector of secrets. Her prestigious tearoom transforms into an illegal bloodhouse by dark, catering to the vampires feared by society. But when her establishment is threatened, Arthie is forced to strike an unlikely deal with an alluring adversary to save it—and she can’t do the job alone.",
     price: 286.00,
-    img_url: "https://nusaibah01.github.io/all-images/images/A Tempest of Tea (Blood and Tea, #1) .jpg"
+    img_url:'https://nusaibah01.github.io/all-images/images/ATempestofTeaBloodandTea1.jpg'
 },
 {
     id: 8,
@@ -77,7 +77,7 @@ JSON.stringify(
     genre: "Psychological Fiction",
     description:"The fantasy novel revolves around a teenage Indian boy, Pi, who becomes lost at sea after a shipwreck. Pi finds himself struggling for survival against the torrential ocean with his only companion, a Bengal tiger.",
     price: 165.00,
-    img_url: "https://nusaibah01.github.io/all-images/images/Life Of Pi.jpg"
+    img_url: "https://nusaibah01.github.io/all-images/images/LifeOfPi.jpg"
 },
 {
     id: 10,
@@ -85,7 +85,7 @@ JSON.stringify(
     genre: "Historical Fiction",
     descriptiion:"The Book Thief is a story narrated by a compassionate Death who tells us about Liesel, a girl growing up in Germany during World War II.",
     price: 500.00,
-    img_url: "https://nusaibah01.github.io/all-images/images/The book thief.jpg"
+    img_url: "https://nusaibah01.github.io/all-images/images/Thebookthief.jpg"
 },
 
 
@@ -93,21 +93,21 @@ JSON.stringify(
 ]
    )
 )
-
-function displayProducts() {
+document.addEventListener('DOMContentLoaded', function() {
+  function displayProducts() {
     const productTable = document.getElementById('productTable')
     productTable.innerHTML = '';
   
     products.forEach(product => {
       const row = document.createElement('tr')
       row.innerHTML = `
-        <td><img src="${product.image_url}" alt="${product.bookTitle}" class="img-fluid" style="max-width: 100px;"></td>
+        <td><img src=${product.img_url} alt="${product.bookTitle}" class="books"></td>
         <td>${product.bookTitle}</td>
         <td>${product.genre}</td>
         <td>R${product.price.toFixed(2)}</td>
         <td>
-          <button class="btn btn-primary btn-sm me-2" onclick="editProduct('${product.bookTitle}')">Edit</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteProduct('${product.bookTitle}')">Delete</button>
+          <button class="btn btn-primary btn-sm me-2" onclick="editProduct('${product.bookTitle}')"><i class="bi bi-pencil-square"></i></button>
+          <button class="btn btn-danger btn-sm" onclick="deleteProduct('${product.bookTitle}')"><i class="bi bi-trash-fill"></i></button>
         </td>
       `
       productTable.appendChild(row)
@@ -148,3 +148,5 @@ function displayProducts() {
   }
   
   displayProducts();
+});
+
