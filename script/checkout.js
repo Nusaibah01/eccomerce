@@ -1,20 +1,21 @@
 //  Display the current year
 document.querySelector('[currentYear]').textContent = new Date().getUTCFullYear()
 
+
 // Add to Cart
 
-// function addToCart(product) {
-//     try {
-//         checkoutItems.push(product)
-//         localStorage.setItem('checkout', JSON.stringify(checkoutItems))
-//         document.querySelector('[counter]').textContent = checkoutItems.length || 0
-//     } catch (e) {
-//         alert("Unable to add to cart")
-//     }
-// }
-// window.onload = () => {
-//     document.querySelector('[counter]').textContent = checkoutItems.length || 0
-// }
+function addToCart(product) {
+    try {
+        checkoutItems.push(product)
+        localStorage.setItem('checkout', JSON.stringify(checkoutItems))
+        document.querySelector('[counter]').textContent = checkoutItems.length || 0
+    } catch (e) {
+        alert("Unable to add to cart")
+    }
+}
+window.onload = () => {
+    document.querySelector('[counter]').textContent = checkoutItems.length || 0
+}
 
 
 function checkoutTable(){
@@ -28,9 +29,62 @@ function checkoutTable(){
         <td>${product.description}</td>
         <td>${product.quantity}</td>
         <td id="amount">R ${product.price}</td>
-        </tr>`
-    });
+        </tr>
+        `
+    })
+} catch(e) {
+
 }
 
 
+// import { products} from './code.js';
+// function calculateTotal(){
+//     const product = products.find(b => b.name === bookTitle)
+//     let productQuanity = document.querySelector(']')
+//     const totalCost = product.price * product.
 
+// }
+
+// 
+
+// Retrieve cart items from localStorage
+let cartItems = JSON.parse(localStorage.getItem('checkoutItems')) || [];
+
+// Display the cart items in the table
+function displayCartItems() {
+  let cartItemsContainer = document.getElementById('cart-items');
+  cartItemsContainer.innerHTML = '';
+
+  let totalAmount = 0;
+
+  cartItems.forEach((item, index) => {
+    let row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.category}</td>
+      <td>${item.quantity}</td>
+      <td>R${item.price.toFixed(2)}</td>
+      <td>R${(item.price * item.quantity).toFixed(2)}</td>
+    `;
+    cartItemsContainer.appendChild(row);
+
+    totalAmount += item.price * item.quantity;
+  });
+
+  document.getElementById('total-amount').textContent = `R${totalAmount.toFixed(2)}`;
+}
+
+// Clear the cart
+function clearCart() {
+  cartItems = [];
+  localStorage.removeItem('cartItems');
+  displayCartItems();
+}
+
+// Show a thank you alert
+function showThankYouAlert() {
+  alert('Thank you for your purchase! (≧∇≦)ﾉ');
+}
+
+// Display the cart items on page load
+displayCartItems();
